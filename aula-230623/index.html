@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <title>Tabelas</title>
 </head>
-<body>  
+
+<body>
+    <!-- Escopo -> Bolco de código -->
     <!-- <table> -> Estrutura de uma tabela em HTML -->
     <!-- <tr> -> Linha de uma tabela -->
     <!-- <td> -> Representa a célula da tabela -->
-        
-    <h1>Tabelas</h1>
-  
+    <!-- <th> -> Representa do titulo da coluna -->
+    <!-- <colgroup> e <col> -> Tags auxiliares paras estilização das colunas na tabela -->
+    <!-- width 100% -> indica que a tabela deve ocupar a largura-->
+    
+    <h1>Tabelas</h1> 
+
     <h2>Pessoas</h2>
-    <table border="1">
+    <table border="1" style="width 100%"> 
+        <colgroup>
+            <col style="width: 200px">
+            <col style="width: 100px">
+            <col style="width: 300px">
+        </colgroup>
         <tr>
             <td>Nome</td>
             <td>Idade</td>
@@ -84,45 +95,58 @@
         </tr>
     </table>
 
+    <!-- <thead> -> Define o cabeçalho da tabela -->
+    <!-- <tbody> -> Define o corpo da tabela -->
+    <!-- <tfoot> -> Define o rodapé da tabela -->
     <h2>Times de futebol</h2>
     <table border="1">
-        <tr>
-            <th colspan="4">Classificação times no barsileirão</th>
-        </tr>
-        <tr>
-            <th>Nome</th>
-            <th>Pontos</th>
-            <th>Saldo de Gols</th>
-            <th>Vitórias</th>
-        </tr>
-        <tr>
-            <td>Fluminense</td>
-            <td>20</td>
-            <td>9</td>
-            <td>3</td>
-        </tr>
-        <tr>
-            <td>Corinthians</td>
-            <td>70</td>
-            <td>25</td>
-            <td>20</td>
-        </tr>
-        <tr>
-            <td>Flamengo</td>
-            <td>25</td>
-            <td>10</td>
-            <td rowspan="2">10</td>
-        </tr>
-        <tr>
-            <td>Palmeiras</td>
-            <td>90</td>
-            <td>30</td>
-        </tr>
-        <tr>
-            <td colspan="4">
-                <a href="https://brasileirao.cbf.com.br/" target="-blank"> Acesse nosso site.</a>
-            </td>
-        </tr>
+        <thead>
+            <tr>
+                <th colspan="4">Classificação times no barsileirão</th>
+            </tr>
+            <tr>
+                <th>Nome</th>
+                <th>Pontos</th>
+                <th>Saldo de Gols</th>
+                <th>Vitórias</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Fluminense</td>
+                <td>20</td>
+                <td>9</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Corinthians</td>
+                <td>70</td>
+                <td>25</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Flamengo</td>
+                <td>25</td>
+                <td>10</td>
+                <td rowspan="2">10</td>
+            </tr>
+            <tr>
+                <td>Palmeiras</td>
+                <td>90</td>
+                <td>30</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="4">
+                    <a href="https://brasileirao.cbf.com.br/" target="-blank"> Acesse nosso site.</a>
+                </td>
+            </tr>
+        </tfoot>
+
     </table>
 </body>
+
 </html>
