@@ -8,21 +8,84 @@
 </head>
 
 <body>
-    <!-- <form> -> Estrutura base de um formulário HTML-->
-    <!-- <input type=""> -> Define um campo no formulário -->
-    <!-- <button> -> Botão -->
+    <!-- 
+    *<form> -> Estrutura base de um formulário HTML
+    *<input type=""> -> Define um campo no formulário 
+    *<button> -> Botão 
+    *accept="" -> Para determinar qual tipo de arquivo poderá ser aceito
+    *multiple -> Para determinar que poderá ser colocado mais de um arquivo 
+    *placeholder -> Dar um exemplo de como o campo deve ser preenchido 
+    *pattern=""Define um modelo de numero que deve ter min. 4 e no max. 8 digitos 
+    *name -> Indica uma identificação para a informação no envio do formulário 
+    *value -> Indica o valor do campo 
+    *disabled -> Habilita/Desabilita um campo 
+    *min -> Define um numero minimo para campos numericos
+    *max -> Define um numero máximo para campos numericos
+    *minLength -> Minimo de caracteres
+    *maxLength -> Maximo de caracteres
+    *pattern -> Define um padrão/modelo da informação
+    *required -> Define um campo obrigatório
+-->
+
+
 
     <h1>Formulários</h1>
-    <form>
-        Nome:
-        <input type="text"> <br>
+    <form> 
+            CPF: 
+        <input type="text" pattern="[0-9]{10,111}"> <br> 
+            Nome:
+        <input type="text" name="nome"> <br>
             Email:
-        <input type="email"> <br>
+        <input type="email" name="email" placeholder="example@email.com"> <br>
             Senha:
-        <input type="password"> <br>
-            <button>Enviar</button>
+        <input type="password" name="senha" minlength="6"> <br>
+            Idade:
+        <input type="number" name="idade"  min="0" max="150"> <br>
+            Horário de registro:
+        <input type="time" value="15:00" disabled> <br>
+            Data de mascimento:
+        <input type="date" name="data"> <br>
+            URL da imagem:
+        <input type="url" name="foto"> <br>
+            Frente do RG:
+        <input type="file" accept=".png, .jpg" multiple name="rg"> <br>
+            Escolha sua cor favorita:
+        <input type="color" name="cor"> <br>
+            Estado civil: <br>
+        Solteiro:<input type="radio" name="estado-civil" value="solteiro"><br> 
+        Casado:<input type="radio" name="estado-civil" value="casado"><br>
+        
+        Nível de inglês: 1 <input type="range" min="1" max="5" step="1"> 5 <br>
+            Estado:
+        <select name="estado">
+            <option disabled selected>Selecione um estado</option>
+            <option>São Paulo</option>
+            <option>Ceará</option>             
+            <option>Rio de Janeiro</option>
+        </select> <br>
+            Telefone: 
+        <input type="tel" name="telefone"> <br>
+            Fale um pouco sobre Você:<br>
+        <textarea cols="30" rows="3" placeholder="Texto padrão">Escreva aqui... </textarea> <br>
+
+
+        <br>Aceito os termos de uso: <input type="checkbox"> <br>
+
+        <br><button>Enviar</button>
+
+        <!-- 
+            button -> Botão comum (auxlia na execução de um evento javascript)
+            submit -> Submete as informações do formulário
+            reset -> Limpar os campos de um formulário
+        -->
+        <button type="button">Não Faz Nada</button>
+        <button type="reset">Limpar</button>
+        <button type="submit">Enviar</button>
+        <br>
+        <input type="button" value="Não Faz Nada">
+        <input type="reset" value="Limpar">
+        <input type="submit" value="Enviar">
+    
     </form>
-
 </body>
-
 </html>
